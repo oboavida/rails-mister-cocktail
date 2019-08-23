@@ -1,9 +1,18 @@
-<h1>Cocktails</h1>
+<div class="container navbar-lewagon">
+  <h1>Cocktails</h1>
 
-<%= link_to 'Create new cocktail', new_cocktail_path, class: "btn btn-primary" %>
+  <%= link_to 'Create new cocktail', new_cocktail_path, class: "btn btn-outline-white" %>
+</div>
 
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li> <%= link_to cocktail.name, cocktail_path(cocktail) %> </li>
+<div class="container d-flex justify-content-between mt-3">
+    <% @cocktails.each do |cocktail| %>
+      <%= link_to cocktail_path(cocktail) do %>
+        <div class="card-product">
+          <img src="https://dishesdelish.com/wp-content/uploads/2018/06/Tequila-Sunrise-Cocktail-7.jpg" />
+          <div class="card-product-infos">
+            <h2><%= cocktail.name %></h2>
+          </div>
+      <% end %>
+    </div>
   <% end %>
-</ul>
+</div>
