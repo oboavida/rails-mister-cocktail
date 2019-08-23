@@ -10,9 +10,16 @@
 
     <%= simple_form_for @cocktail, html: { autocomplete: 'off' } do |f| %>
       <%= f.input :name, class: "background-transparent" %>
-        <%= f.input :photo %>
-        <%= f.input :photo_cache, as: :hidden %>
-      <%= f.submit 'Create Cocktail', class: "btn btn-outline-white" %>
+
+        <label class="btn btn-outline-white mt-2">
+          Add a file!
+          <span style="display:none;">
+            <%= f.input :photo %>
+            <%= f.input :photo_cache, as: :hidden %>
+          </span>
+        </label><br/>
+
+      <%= f.submit 'Create Cocktail', class: "btn btn-outline-white mt-2" %>
     <% end %><br/>
   </div>
 
