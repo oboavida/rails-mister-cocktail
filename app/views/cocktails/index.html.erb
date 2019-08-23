@@ -10,7 +10,7 @@
     <% @cocktails.each do |cocktail| %>
       <%= link_to cocktail_path(cocktail) do %>
         <div class="card-product mb-4 ml-4">
-          <img src="https://dishesdelish.com/wp-content/uploads/2018/06/Tequila-Sunrise-Cocktail-7.jpg" />
+          <img src="<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>" />
           <div class="card-product-infos">
             <h2><%= cocktail.name %></h2>
           </div>
