@@ -5,15 +5,17 @@
   <%= link_to 'Create new cocktail', new_cocktail_path, class: "btn btn-outline-white" %>
 </div>
 
-<div class="container d-flex justify-content-between mt-3">
+<div class="container mt-3">
+  <div class="row">
     <% @cocktails.each do |cocktail| %>
       <%= link_to cocktail_path(cocktail) do %>
-        <div class="card-product">
+        <div class="card-product mb-4 ml-4">
           <img src="https://dishesdelish.com/wp-content/uploads/2018/06/Tequila-Sunrise-Cocktail-7.jpg" />
           <div class="card-product-infos">
             <h2><%= cocktail.name %></h2>
           </div>
       <% end %>
     </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
