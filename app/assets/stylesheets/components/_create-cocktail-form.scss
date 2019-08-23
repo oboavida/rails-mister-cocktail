@@ -1,0 +1,16 @@
+form {
+  color: white;
+  font-weight: lighter;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.form-control {
+  background-color: rgba(255,255,255,0.2);
+  border: none;
+}
+
+input:focus {
+  background-color: rgba(255,255,255,0.2) !important;
+  color: rgba(255,255,255,0.7) !important;
+  border-color: #93c4fd !important;
+}
