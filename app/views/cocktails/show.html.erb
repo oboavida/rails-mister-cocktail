@@ -5,7 +5,7 @@
   <%= link_to 'Create new cocktail', new_cocktail_path, class: "btn btn-outline-white" %>
 </div>
 
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://static.standard.co.uk/s3fs-public/thumbnails/image/2016/09/30/10/cocktails.jpg?width=1000&height=614&fit=bounds&format=pjpg&auto=webp&quality=70&crop=16:9,offset-y0.5)">
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo, height: 300, width: 400, crop: :fill %>')">
   <%= @cocktail.name %>
 </div>
 
