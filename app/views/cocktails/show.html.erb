@@ -1,9 +1,27 @@
-<h1><%= @cocktail.name %></h1>
+<div class="container navbar-lewagon">
+  <%= link_to root_path do %>
+    <h1><span style="opacity: 0.8;">Miguel's Cocktail Bar</h1>
+  <% end %>
+  <%= link_to 'Create new cocktail', new_cocktail_path, class: "btn btn-outline-white" %>
+</div>
 
-<% @cocktail.doses.each do |dose| %>
-<p><%= dose.description %> <%= dose.ingredient.name %> <%= link_to 'Delete', dose_path(dose), method: :delete %> </p>
-<% end %>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://static.standard.co.uk/s3fs-public/thumbnails/image/2016/09/30/10/cocktails.jpg?width=1000&height=614&fit=bounds&format=pjpg&auto=webp&quality=70&crop=16:9,offset-y0.5)">
+  <%= @cocktail.name %>
+</div>
 
-<%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail.id), class: "btn btn-primary" %>
+<div class="container mt-4">
+  <div class="cocktail-info">
+    <h3>Ingredients:</h3>
+    <% @cocktail.doses.each do |dose| %>
+    <p><%= dose.description %> <%= dose.ingredient.name %> <%= link_to dose_path(dose), method: :delete do%>
+        <i class="far fa-trash-alt"></i>
+      <% end %>
+     </p>
+    <% end %>
+  </div>
 
-<%= link_to 'Go back to cocktails', cocktails_path, class: "btn btn-primary" %>
+  <div class="container d-flex justify-content-center">
+    <%= link_to 'Go back to cocktails', cocktails_path, class: "btn btn-outline-white mr-3" %>
+    <%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail.id), class: "btn btn-outline-white" %>
+  </div>
+</div>

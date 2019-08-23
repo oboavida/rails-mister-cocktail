@@ -1,9 +1,18 @@
-<h1>Create new doses for <%#= @cocktail.name %> </h1>
+<div class="container navbar-lewagon">
+  <%= link_to root_path do %>
+    <h1><span style="opacity: 0.8;">Miguel's Cocktail Bar</h1>
+  <% end %>
+</div>
 
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description %>
-  <%= f.association :ingredient %>
-  <%= f.submit 'Create Dose for Cocktail', class: "btn btn-primary" %>
-<% end %>
+<div class="container" style="margin-left: 90px;">
+  <div class="form">
+    <h1>Create new doses for <%= @cocktail.name %> </h1>
 
-<%= link_to 'Go back', root_path, class: "btn btn-primary" %>
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.input :description %>
+      <%= f.association :ingredient %>
+      <%= f.submit 'Create Dose for Cocktail', class: "btn btn-outline-white" %>
+    <% end %></br>
+
+    <%= link_to 'Go back', root_path, class: "btn btn-outline-white" %>
+</div>

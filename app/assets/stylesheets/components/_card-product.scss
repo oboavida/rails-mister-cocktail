@@ -2,7 +2,7 @@
   overflow: hidden;
   height: 100px;
   width: 340px;
-  background: linear-gradient(135deg, rgba(255,161,46,0.5) 0%, rgba(240,132,0,0.5) 100%);
+  background: linear-gradient(135deg, rgba(165,31,255,1) 0%, rgba(138,0,230,1) 100%);
   box-shadow: inset 0 0 20px rgba(0,0,0,0.08);
   display: flex;
   align-items: center;
@@ -15,7 +15,10 @@
 
   &:hover {
     text-decoration: none;
-    background: linear-gradient(135deg, rgba(255,149,20,1) 0%, rgba(219,121,0,1) 100%);
+    background: linear-gradient(135deg, rgba(159,15,255,1) 0%, rgba(129,0,214,1) 100%);
+    h2 {
+      opacity: 0.5;
+    }
   }
 }
 

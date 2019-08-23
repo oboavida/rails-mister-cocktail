@@ -1,8 +1,18 @@
-<h1>Create new cocktail</h1>
+<div class="container navbar-lewagon">
+  <%= link_to root_path do %>
+    <h1><span style="opacity: 0.8;">Miguel's Cocktail Bar</h1>
+  <% end %>
+</div>
 
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.submit 'Create Cocktail', class: "btn btn-primary" %>
-<% end %>
+<div class="container" style="margin-left: 90px;">
+  <div class="form">
+    <h1>Create new cocktail</h1>
 
-<%= link_to 'Go back', root_path, class: "btn btn-primary" %>
+    <%= simple_form_for @cocktail do |f| %>
+      <%= f.input :name %>
+      <%= f.submit 'Create Cocktail', class: "btn btn-outline-white" %>
+    <% end %><br/>
+  </div>
+
+  <%= link_to 'Go back', root_path, class: "btn btn-outline-white" %>
+</div>

@@ -1,0 +1,14 @@
+.btn-outline-white {
+  color: white;
+  font-weight: lighter;
+  padding: 10px 20  px;
+  border: 1px solid rgba(250,250,250,0.7);
+  border-radius: 50px;
+
+  &:hover {
+    text-decoration: none;
+    background: linear-gradient(135deg, rgba(255,15,99,1) 0%, rgba(214,0,75,1) 100%);
+    color: white;
+    border-color: rgba(255,15,99,1);
+  }
+}
