@@ -11,7 +11,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'cloudinary', '~> 1.9.1'
 
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 1.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -29,7 +29,7 @@ gem 'webpacker'
 # gem 'mini_racer', platforms: :ruby
 
 
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 1.3'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
